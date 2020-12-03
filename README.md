@@ -25,6 +25,18 @@ Après un tour d'horizon, le candidat pour monter un Hotspot semble être RaspAp
 
 # FRONTEND WAN
 
+- Chat (sans mysql si possible)
+- Actualités (blog anonyme avec éditeur WYSIWYG) ENVOI - ok pour URL, image mais restrictions .jpg .png (voir pour permettre envoi image)
+  - tinyMCE ? à voir cette histoire d upload
+- Collection d'ebooks ENVOI .pdf
+- Vidéos ENVOI .mov .mp4 .avi
+- Audios ENVOI .mp3 .ogg
+- Rassembler les envois sur un seul formulaire -> Tri des extensions fichiers vers les dossiers qui vont bien
+- 'Searchbar' -> noms des fichiers. contenu blogs (titre et texte)
+- Streaming pour dossier /Videos et /Audios
+
+- OPTION portail accès internet (avec ratio et/ou autre). login/mdp.
+
 # BACKEND accessible seulement sur le LAN
 - connectés/log
 - état mémoire etc info system
@@ -51,18 +63,6 @@ Pour les
 - Artistes
 - Commerces
 - Cours/écoles/prof
-
-# Fonctionnalités
-
-- Chat (sans mysql si possible)
-- Actualités (blog anonyme avec éditeur WYSIWYG) ENVOI - ok pour URL, image mais restrictions .jpg .png (voir pour permettre envoi image)
-- Collection d'ebooks ENVOI .pdf
-- Vidéos ENVOI .mov .mp4 .avi
-- Audios ENVOI .mp3 .ogg
-- Rassembler les envois sur un seul formulaire -> Tri des extensions fichiers vers les dossiers qui vont bien
-- Streaming pour dossier /Videos et /Audios
-
-- OPTION portail accès internet (avec ratio et/ou autre). login/mdp.
 
 # Points
 - automatisation du tri/renommage
