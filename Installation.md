@@ -23,10 +23,25 @@ http://10.3.141.1
 login:admin
 password:secret
 
+# A. CHAT
 
+<code>sudo apt update && sudo apt install snapd</code>
+sudo snap install rocketchat-server
 
+ss -ant
 
+Ca doit renvoyer:
+LISTEN 0 128   *:3000        *:*
 
+Voilà il ne reste plus qu’à tester l’url de tchat dans votre navigateur:
+
+https://IpRaspberry:3000
+
+Il ne reste plus qu’à créer les utilisateurs, paramétrer un peu notre serveur puis installer un client sur notre téléphone ou pc.
+
+pour gérer démarrage et arrêt du service;
+
+service snap.rocketchat-server.rocketchat-server stop
 
 
 
