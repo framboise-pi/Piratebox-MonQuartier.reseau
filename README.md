@@ -63,3 +63,4 @@ Pour les
 # Points
 - automatisation du tri/renommage
 - essais de portée avec un scanner Wifi mobile (WIFI intégré et dongle USB déporté)
+- filtrer les insultes et envoyer alarme ? Anonymat de veut pas dire manque de respect. MACban à prévoir sur multiples.
