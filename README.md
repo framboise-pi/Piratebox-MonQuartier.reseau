@@ -5,6 +5,9 @@ Après un essai de PirateBox, la décision est prise de fabriquer une box social
 Peut être comme vous ?
 Mettez une étoile et ce projet ira plus vite !
 
+# MonQuartier.box ? MonQuartier.reseau ?
+SSID : "MonQuartier.reseau GRATUIT"
+
 # Base
 Après un tour d'horizon, le candidat pour monter un Hotspot semble être RaspAp.
 
@@ -33,7 +36,8 @@ Aucun responsabilité sur le contenu envoyé sur la Box (trouver un nom commerci
 Aucune modération, sauf exception, des fichiers et autres.
 
 
-# Ne pas faire apparaître les informations : garder l'anonymat du messager, de la personne/appareil qui envoies les données.
+# Ne pas faire apparaître les informations
+- garder l'anonymat du messager, de la personne/appareil qui envoies les données.
 
 # Pour qui ? - ajouter exemples
 
