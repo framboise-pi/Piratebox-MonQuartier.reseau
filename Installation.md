@@ -1,3 +1,39 @@
+# Info
+Je travail avec des versions Desktop de Raspbian, l'installation est faite en ce sens : Raspbian Desktop + VNC
+
+# 1. Installation d'une Raspbian fraiche
+rien de particulier (Etcher + .img + microSD)
+
+# 2. Installation de RaspAp
+
+sudo wget -q https://git.io/voEUQ -O /tmp/raspap && bash /tmp/raspap
+
+pour HTTPS
+sudo wget -q https://git.io/voEUQ -O /tmp/raspap && bash /tmp/raspap --cert
+
+httponly : yes
+php Opcache : Yes
+
+# 3. Connexion au Wifi : SSID
+SSID : raspi-webgui
+mot de passe : ChangeMe
+
+# 4. Backend
+http://10.3.141.1
+login:admin
+password:secret
+
+
+
+
+
+
+
+
+
+
+
+
 PirateBox Raspberry Pi DIY
 
 PirateBox is an anonymous offline mobile file-sharing and communications system built with free software and inexpensive off-the-shelf hardware. You can use it to transform any space into a free and open offline communications and file sharing network. Learn more about PirateBox on our FAQ page!
