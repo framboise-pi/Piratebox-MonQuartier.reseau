@@ -24,6 +24,34 @@ http://10.3.141.1
 login:admin
 password:secret
 
+# A. APACHE
+sudo apt install apache2
+sudo chown -R pi:www-data /var/www/html/
+sudo chmod -R 770 /var/www/html/
+Apache utilise le répertoire /var/www/html comme racine pour votre site. Cela signifie que quand vous appelez votre Raspberry sur le port 80 (http), Apache cherche le fichier dans /var/www/html.
+
+# B. PHP
+sudo apt install php php-mbstring
+
+# C. MARIADB
+sudo apt install mariadb-server php-mysql
+
+connexion root
+sudo mysql --user=root
+Nous allons maintenant supprimer l’utilisateur root et créer un nouvel utilisateur root, 
+DROP USER 'root'@'localhost';
+CREATE USER 'root'@'localhost' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' WITH GRANT OPTION;
+
+# D. PHPmyadmin
+sudo apt install phpmyadmin
+ choisissez no à la question concernant l’utilisation de dbconfig-common.
+ sudo phpenmod mysqli
+sudo /etc/init.d/apache2 restart
+Si jamais vous avez une erreur, cela peut venir du fait que PHPMyAdmin se soit installé dans un autre dossier. Dans ce cas, essayez la commande
+
+sudo ln -s /usr/share/phpmyadmin /var/www/html/phpmyadmin
+
 # A. CHAT
 
 <code>sudo apt update && sudo apt install snapd</code>
