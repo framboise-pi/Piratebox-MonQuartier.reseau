@@ -62,3 +62,4 @@ Pour les
 
 # Points
 - automatisation du tri/renommage
+- essais de portée avec un scanner Wifi mobile (WIFI intégré et dongle USB déporté)
