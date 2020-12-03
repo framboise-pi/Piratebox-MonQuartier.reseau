@@ -6,13 +6,13 @@ rien de particulier (Etcher + .img + microSD)
 
 # 2. Installation de RaspAp
 
-sudo wget -q https://git.io/voEUQ -O /tmp/raspap && bash /tmp/raspap
+<code>sudo wget -q https://git.io/voEUQ -O /tmp/raspap && bash /tmp/raspap</code>
 
 pour HTTPS
-sudo wget -q https://git.io/voEUQ -O /tmp/raspap && bash /tmp/raspap --cert
+<code>sudo wget -q https://git.io/voEUQ -O /tmp/raspap && bash /tmp/raspap --cert</code>
 
-httponly : yes
-php Opcache : Yes
+<br><code>httponly : yes</code>
+<br><code>php Opcache : Yes</code>
 
 # 3. Connexion au Wifi : SSID
 SSID : raspi-webgui
