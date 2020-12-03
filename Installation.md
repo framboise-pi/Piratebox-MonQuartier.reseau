@@ -5,6 +5,7 @@ Je travail avec des versions Desktop de Raspbian, l'installation est faite en ce
 rien de particulier (Etcher + .img + microSD)
 
 # 2. Installation de RaspAp
+wiki : https://github.com/billz/raspap-webgui/wiki/FAQs
 
 <code>sudo wget -q https://git.io/voEUQ -O /tmp/raspap && bash /tmp/raspap</code>
 
