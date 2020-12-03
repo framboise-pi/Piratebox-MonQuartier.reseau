@@ -11,6 +11,11 @@ wiki : https://github.com/billz/raspap-webgui/wiki/FAQs
 
 pour un serveur HTTPS : 
 <code>curl -sL https://install.raspap.com | bash -s -- --cert</code>
+<br>Open a browser and enter the address: http://raspberrypi.local/rootCA.pem (this URL may be your IP address or a different hostname, depending on your unique setup). Download the root certificate
+<br>
+<br>Copy your CA to dir /usr/local/share/ca-certificates/
+<br>Use command: sudo cp foo.crt /usr/local/share/ca-certificates/foo.crt.
+<br>Update the CA store: sudo update-ca-certificates.
 
 <br><code>httponly : yes</code>
 <br><code>php Opcache : Yes</code>
