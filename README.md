@@ -26,7 +26,7 @@ Après un tour d'horizon, le candidat pour monter un Hotspot semble être RaspAp
 
 # FRONTEND WAN
 
-- Chat (mysql -> sécuriser)
+- Chat (mysql -> sécuriser) simple. si ajout -password au pseudo -> couleur .css admin
 - Actualités (blog anonyme avec éditeur WYSIWYG) ENVOI - ok pour URL, image mais restrictions .jpg .png (voir pour permettre envoi image)
   - tinyMCE ? à voir cette histoire d upload
 - Collection d'ebooks ENVOI .pdf
@@ -51,10 +51,12 @@ Exemple : un commerce qui n'a pas un accès internet rapide comme la fibre optiq
 
 # Sécurité
 
-# Présentation
-Aucun responsabilité sur le contenu envoyé sur la Box (trouver un nom commercial au projet. Acheter url si soutients).
-Aucune modération, sauf exception, des fichiers et autres.
+# Header/Présentation
 
+Merci de poster les flyers des commercants du quartier que vous recommandez !
+Aucun responsabilité sur le contenu envoyé sur ce réseau intranet.
+Aucune modération, sauf exception, des fichiers et autres par l'administrateur.
+Ne pas envoyer d'informations personnelles ou qui pourraient vous porter atteinte entre de mauvaises mains.
 
 # Ne pas faire apparaître les informations
 - garder l'anonymat du messager, de la personne/appareil qui envoies les données.
@@ -70,3 +72,5 @@ Pour les
 - automatisation du tri/renommage
 - essais de portée avec un scanner Wifi mobile (WIFI intégré et dongle USB déporté)
 - filtrer les insultes et envoyer alarme ? Anonymat de veut pas dire manque de respect. MACban à prévoir sur multiples.
+- wiki sur comment envoyer etc ?
+- 
