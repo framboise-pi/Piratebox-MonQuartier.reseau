@@ -9,13 +9,13 @@ Mettez une étoile et ce projet ira plus vite !
 # L'idée
  <table style="width:100%">
   <tr>
-    <th><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/PirateBox-logo.svg/1200px-PirateBox-logo.svg.png" width="50" height="50">
-</th>
-    <th>Complètement dans le sens de le PirateBox, mais tourné uniquement autour du Raspberry (3B utilisé pour ce projet)
+    <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/PirateBox-logo.svg/1200px-PirateBox-logo.svg.png" width="50" height="50">
+</td>
+    <td>Complètement dans le sens de le PirateBox, mais tourné uniquement autour du Raspberry (3B utilisé pour ce projet)
 Autour d'un serveur web et de Bootstrap, proposer quelque chose d'intéressant pour le quartier en terme d'échange 'local' !
 Avec ce petit 'plus' de permettre aux artisans et commercants de faire leurs pubs par exemple.</th>
 
-  </tr>
+  </td>
 
 </table> 
 
