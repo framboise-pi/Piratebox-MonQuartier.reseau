@@ -71,8 +71,9 @@ Il ne reste plus qu’à créer les utilisateurs, paramétrer un peu notre serve
 pour gérer démarrage et arrêt du service;
 
 service snap.rocketchat-server.rocketchat-server stop
+ Create the first user, which will become the server's adminsitrator
 
-
+https://docs.rocket.chat/guides/administrator-guides#administrator-guides
 
 
 
