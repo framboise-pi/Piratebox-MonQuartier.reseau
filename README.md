@@ -33,6 +33,7 @@ Après un tour d'horizon, le candidat pour monter un Hotspot semble être RaspAp
 - PHP
 - mémoire externe
 - Bootstrap (veiller à n'utiliser aucune dependance online) et vérifier si tentatives accès des .js ou autre (resolution dns)
+- FTP
 
 # FRONTEND WAN
 
