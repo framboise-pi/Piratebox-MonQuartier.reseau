@@ -55,9 +55,13 @@ Pour les
 # Fonctionnalités
 
 - Chat (sans mysql si possible)
-- Actualités (blog anonyme avec éditeur WYSIWYG) ENVOI - ok pour URL, image mais restrictions .jpg .png
+- Actualités (blog anonyme avec éditeur WYSIWYG) ENVOI - ok pour URL, image mais restrictions .jpg .png (voir pour permettre envoi image)
 - Collection d'ebooks ENVOI .pdf
 - Vidéos ENVOI .mov .mp4 .avi
+- Audios ENVOI .mp3 .ogg
+- Rassembler les envois sur un seul formulaire -> Tri des extensions fichiers vers les dossiers qui vont bien
+- Streaming pour dossier /Videos et /Audios
+
 - OPTION portail accès internet (avec ratio et/ou autre). login/mdp.
 
 # Points
