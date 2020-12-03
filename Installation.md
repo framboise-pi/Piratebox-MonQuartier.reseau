@@ -29,6 +29,12 @@ pour un serveur HTTPS :
 <br><code>login:admin</code>
 <br><code>password:secret</code>
 
+# 5.
+<br>If you have trouble getting the hostapd service to start, add the following to /etc/rc.local just before exit 0:
+<br>service hostapd stop
+<br>sleep 5
+<br>service hostapd start
+
 # A. APACHE
 <br><code>sudo apt install apache2</code></code>
 <br><code>sudo chown -R pi:www-data /var/www/html/</code>
