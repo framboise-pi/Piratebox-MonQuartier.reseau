@@ -26,7 +26,7 @@ Après un tour d'horizon, le candidat pour monter un Hotspot semble être RaspAp
 
 # FRONTEND WAN
 
-- Chat (sans mysql si possible)
+- Chat (mysql -> sécuriser)
 - Actualités (blog anonyme avec éditeur WYSIWYG) ENVOI - ok pour URL, image mais restrictions .jpg .png (voir pour permettre envoi image)
   - tinyMCE ? à voir cette histoire d upload
 - Collection d'ebooks ENVOI .pdf
@@ -41,6 +41,7 @@ Après un tour d'horizon, le candidat pour monter un Hotspot semble être RaspAp
 # BACKEND accessible seulement sur le LAN
 - connectés/log
 - état mémoire etc info system
+- vue du chat et purge
 
 # FIREWALL.IPTABLE
 
