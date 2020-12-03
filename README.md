@@ -48,6 +48,7 @@ Après un tour d'horizon, le candidat pour monter un Hotspot semble être RaspAp
 - Rassembler les envois sur un seul formulaire -> Tri des extensions fichiers vers les dossiers qui vont bien
 - 'Searchbar' -> noms des fichiers. contenu blogs (titre et texte)
 - Streaming pour dossier /Videos et /Audios
+- ligne/bandeau avec info NEWS.reseau : dernière update ou message d'un shutdown prochain etc.
 
 - OPTION portail accès internet (avec ratio et/ou autre). login/mdp.
 
@@ -55,6 +56,7 @@ Après un tour d'horizon, le candidat pour monter un Hotspot semble être RaspAp
 - connectés/log
 - état mémoire etc info system
 - vue du chat et purge
+- info NEWS.reseau
 
 # FIREWALL.IPTABLE
 
