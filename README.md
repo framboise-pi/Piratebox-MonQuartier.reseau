@@ -38,8 +38,10 @@ Après un tour d'horizon, le candidat pour monter un Hotspot semble être RaspAp
 # FRONTEND WAN
 
 - Chat (mysql -> sécuriser) simple. si ajout -password au pseudo -> couleur .css admin
-- Actualités (blog anonyme avec éditeur WYSIWYG) ENVOI - ok pour URL, image mais restrictions .jpg .png (voir pour permettre envoi image)
+- Actualités (blog anonyme avec éditeur WYSIWYG) ENVOI - ok pour URL, image mais restrictions .jpg .png (voir pour permettre envoi image) choix THEME
   - tinyMCE ? à voir cette histoire d upload
+  - THEMES : ARTISAN/ARTISTE + COMMERCANT + HABITANT + ?
+  - -> Blog : lister tout sur une page. Tri date up/down. Checkboxes des THEMES
 - Collection d'ebooks ENVOI .pdf
 - Vidéos ENVOI .mov .mp4 .avi
 - Audios ENVOI .mp3 .ogg
@@ -85,3 +87,6 @@ Pour les
 - filtrer les insultes et envoyer alarme ? Anonymat de veut pas dire manque de respect. MACban à prévoir sur multiples.
 - wiki sur comment envoyer etc ?
 - 
+
+# Soutien
+- possibilité compte VIP ? sans login ... avec un code secret à rajouter au pseudo ?
