@@ -5,7 +5,13 @@ Après un essai de PirateBox, la décision est prise de fabriquer une box social
 Peut être comme vous ?
 Mettez une étoile et ce projet ira plus vite !
 
-# MonQuartier.box ? MonQuartier.reseau ?
+
+# L'idée
+Complètement dans le sens de le PrateBox, mais tourné uniquement autour du Raspberry (3B utilisé pour ce projet)
+Autour d'un serveur web et de Bootstrap, proposer quelque chose d'intéressant pour le quartier en terme d'échange 'local' !
+Avec ce petit 'plus' de permettre aux artisans et commercants de faire leurs pubs par exemple.
+
+# MonQuartier.reseau ?
 SSID : "MonQuartier.reseau GRATUIT"
 
 # Base
