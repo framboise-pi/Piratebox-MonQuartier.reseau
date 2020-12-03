@@ -9,39 +9,41 @@ wiki : https://github.com/billz/raspap-webgui/wiki/FAQs
 
 <code>sudo wget -q https://git.io/voEUQ -O /tmp/raspap && bash /tmp/raspap</code>
 
-pour HTTPS
+pour un serveur HTTPS : 
 <code>sudo wget -q https://git.io/voEUQ -O /tmp/raspap && bash /tmp/raspap --cert</code>
 
 <br><code>httponly : yes</code>
 <br><code>php Opcache : Yes</code>
 
 # 3. Connexion au Wifi : SSID
-SSID : raspi-webgui
-mot de passe : ChangeMe
+<br><code>SSID : raspi-webgui</code>
+<br><code>mot de passe : ChangeMe</code>
 
 # 4. Backend
-http://10.3.141.1
-login:admin
-password:secret
+<br><code>http://10.3.141.1</code>
+<br><code>login:admin</code>
+<br><code>password:secret</code>
 
 # A. APACHE
-sudo apt install apache2
-sudo chown -R pi:www-data /var/www/html/
-sudo chmod -R 770 /var/www/html/
-Apache utilise le répertoire /var/www/html comme racine pour votre site. Cela signifie que quand vous appelez votre Raspberry sur le port 80 (http), Apache cherche le fichier dans /var/www/html.
+<br><code>sudo apt install apache2</code></code>
+<br><code>sudo chown -R pi:www-data /var/www/html/</code>
+<br><code>sudo chmod -R 770 /var/www/html/</code>
+<br>Apache utilise le répertoire /var/www/html comme racine pour votre site. Cela signifie que quand vous appelez votre Raspberry sur le port 80 (http), Apache cherche le fichier dans /var/www/html.
 
 # B. PHP
-sudo apt install php php-mbstring
+<br><code>sudo apt install php php-mbstring</code>
 
 # C. MARIADB
-sudo apt install mariadb-server php-mysql
+<br><code>sudo apt install mariadb-server php-mysql</code>
 
-connexion root
-sudo mysql --user=root
-Nous allons maintenant supprimer l’utilisateur root et créer un nouvel utilisateur root, 
-DROP USER 'root'@'localhost';
-CREATE USER 'root'@'localhost' IDENTIFIED BY 'password';
-GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' WITH GRANT OPTION;
+<br>connexion root
+<br><code>sudo mysql --user=root</code>
+
+- Supprimer l’ancien utilisateur root et en créer un nouveau :
+<br>
+<br><code>DROP USER 'root'@'localhost';</code>
+<br><code>CREATE USER 'root'@'localhost' IDENTIFIED BY 'password';</code>
+<br><code>GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' WITH GRANT OPTION;</code>
 
 # D. PHPmyadmin
 sudo apt install phpmyadmin
