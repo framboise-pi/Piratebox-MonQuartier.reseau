@@ -19,8 +19,9 @@ Exemple : un commerce qui n'a pas un accès internet rapide comme la fibre optiq
 # Sécurité
 
 # Présentation
-Aucun responsabilité sur le contenu envoyé sur la Box (renommer).
-Aucune modération, sauf exception, des fichiers et autres
+Aucun responsabilité sur le contenu envoyé sur la Box (trouver un nom commercial au projet. Acheter url si soutients).
+Aucune modération, sauf exception, des fichiers et autres.
+
 
 # Ne pas faire apparaître les informations : garder l'anonymat du messager, de la personne/appareil qui envoies les données.
 
@@ -37,3 +38,6 @@ Pour les
 - Forum
 - ebooks (collections de livres numériques)
 - OPTION portail accès internet (avec ratio et/ou autre). login/mdp.
+
+# Points
+- automatisation du tri/renommage
