@@ -8,9 +8,19 @@ Mettez une étoile et ce projet ira plus vite !
 # Base
 Après un tour d'horizon, le candidat pour monter un Hotspot semble être RaspAp.
 
-# DHCP
+- DNS
+- DHCP
+- MariaDB
+- PHP
+- mémoire externe
 
-# DNS
+# FRONTEND WAN
+
+# BACKEND accessible seulement sur le LAN
+- connectés/log
+- état mémoire etc info system
+
+# FIREWALL.IPTABLE
 
 # Pas d'accès internet
 ou éventuellement proposer, sous forme de 'Portal' un accès internet avec login/mdp.
@@ -34,9 +44,10 @@ Pour les
 
 # Fonctionnalités
 
-- Chat
-- Forum
-- ebooks (collections de livres numériques)
+- Chat (sans mysql si possible)
+- Actualités (blog anonyme avec éditeur WYSIWYG) ENVOI - ok pour URL, image mais restrictions .jpg .png
+- Collection d'ebooks ENVOI .pdf
+- Vidéos ENVOI .mov .mp4 .avi
 - OPTION portail accès internet (avec ratio et/ou autre). login/mdp.
 
 # Points
