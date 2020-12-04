@@ -9,6 +9,15 @@ wiki : https://github.com/billz/raspap-webgui/wiki/FAQs
 
 <code>sudo wget -q https://git.io/voEUQ -O /tmp/raspap && bash /tmp/raspap</code>
 
+<br>sudo apt-get install lighttpd git hostapd dnsmasq iptables-persistent vnstat qrencode php7.3-cgi
+
+Enable PHP for lighttpd and restart it for the settings to take effect.
+
+sudo lighttpd-enable-mod fastcgi-php    
+sudo service lighttpd force-reload
+sudo systemctl restart lighttpd.service
+
+
 pour un serveur HTTPS : 
 <code>curl -sL https://install.raspap.com | bash -s -- --cert</code>
 <br>Open a browser and enter the address: http://raspberrypi.local/rootCA.pem (this URL may be your IP address or a different hostname, depending on your unique setup). Download the root certificate
@@ -35,11 +44,19 @@ pour un serveur HTTPS :
 <br>sleep 5
 <br>service hostapd start
 
-# A. APACHE
-<br><code>sudo apt install apache2</code></code>
-<br><code>sudo chown -R pi:www-data /var/www/html/</code>
-<br><code>sudo chmod -R 770 /var/www/html/</code>
-<br>Apache utilise le répertoire /var/www/html comme racine pour votre site. Cela signifie que quand vous appelez votre Raspberry sur le port 80 (http), Apache cherche le fichier dans /var/www/html.
+# 6.DNS
+<br>utilisation de dnsmasq
+<br>sudo nano /etc/dnsmasq.conf
+<br>address=/#/IP_WIFI_RASPAP
+<br>domain-needed
+<br>bogus-priv
+<br>no-resolv
+<br>cache-size=1000
+<br>
+<br>sudo systemctl restart dnsmasq
+
+# A.LIGHTTPD
+ Ce serveur web est installé automatiquement avec RaspAp. Pas besoin d'Apache sur ce coup.
 
 # B. PHP
 <br><code>sudo apt install php php-mbstring</code>
@@ -89,6 +106,8 @@ service snap.rocketchat-server.rocketchat-server stop
 https://docs.rocket.chat/guides/administrator-guides#administrator-guides
 
 
-
+# Désactiver dnsmasq
+<br>sudo systemctl stop dnsmasq
+<br>sudo systemctl restart dnsmasq
 
 
