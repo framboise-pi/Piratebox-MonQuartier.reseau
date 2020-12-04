@@ -110,4 +110,7 @@ https://docs.rocket.chat/guides/administrator-guides#administrator-guides
 <br>sudo systemctl stop dnsmasq
 <br>sudo systemctl restart dnsmasq
 
+fichier /etc/resolv.conf
+ fichier /etc/hosts
+ 
 
