@@ -34,7 +34,10 @@ pour un serveur HTTPS :
 <br><code>mot de passe : ChangeMe</code>
 
 # 4. Backend
-<br><code>http://10.3.141.1</code>
+- déplacer tout les fichiers du répertoire www/html/ vers www/html/raspap
+<br>nous utiliserons un .htaccess pour restreindre l'accès à ce dossier, et donc au backend de RaspAp à une IP ou plusieurs du LAN et non du WAN
+<br>
+<br><code>http://10.3.141.1/raspap</code>
 <br><code>login:admin</code>
 <br><code>password:secret</code>
 
@@ -84,26 +87,95 @@ sudo ln -s /usr/share/phpmyadmin /var/www/html/phpmyadmin
 
 # A. CHAT
 
-<code>sudo apt update && sudo apt install snapd</code>
-sudo snap install rocketchat-server
+- créer base de données 'monquartier'
+-- créer table 'chat' à 4 colonnes
 
-ss -ant
+-- ID (type INT  ) auto_increment « Primaire »
+-- DATE (type DATE)
+-- PSEUDO (type VARCHAR 255 )
+-- MSG (type TEXT)
+???? -- MAC (type VARCHAR 255) à voir si besoin de Ban ????
 
-Ca doit renvoyer:
-LISTEN 0 128   *:3000        *:*
+# A.1. chat.php
 
-Voilà il ne reste plus qu’à tester l’url de tchat dans votre navigateur:
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Chat</title>
+    </head>
+    <style>
+    form
+    {
+        text-align:center;
+    }
+    </style>
+    <body>
+    
+    <?php
+    if $_POST['pseudo']
+     {
+      $pseudo=$_POST['pseudo'];
+      
+     }
+     else
+     $pseudo="pseudo";
+    ?>
+    
+    <form action="chat_post.php" method="post">
+        <p>
+        <label for="pseudo">Pseudo</label> : <input type="text" name="<?php echo $pseudo ?>" id="pseudo" /><br />
+        <label for="message">Message</label> :  <input type="text" name="message" id="message" /><br />
 
-https://IpRaspberry:3000
+        <input type="submit" value="Envoyer" />
+	</p>
+    </form>
 
-Il ne reste plus qu’à créer les utilisateurs, paramétrer un peu notre serveur puis installer un client sur notre téléphone ou pc.
+<?php
+// Connexion à la base de données
+try
+{
+	$bdd = new PDO('mysql:host=localhost;dbname=chat;charset=utf8', 'root', 'motdepasse');
+}
+catch(Exception $e)
+{
+        die('Erreur : '.$e->getMessage());
+}
 
-pour gérer démarrage et arrêt du service;
+// les 10 derniers messages
+$reponse = $bdd->query('SELECT PSEUDO, message FROM chat ORDER BY ID DESC LIMIT 0, 10');
 
-service snap.rocketchat-server.rocketchat-server stop
- Create the first user, which will become the server's adminsitrator
+while ($donnees = $reponse->fetch())
+{
+	echo '<p><strong>' . htmlspecialchars($donnees['PSEUDO']) . '</strong> : ' . htmlspecialchars($donnees['MSG']) . '</p>';
+}
 
-https://docs.rocket.chat/guides/administrator-guides#administrator-guides
+$reponse->closeCursor();
+
+?>
+    </body>
+</html>
+
+# A.2
+chat_post.php
+
+<?php
+// Connexion à la base de données
+try
+{
+	$bdd = new PDO('mysql:host=localhost;dbname=chat;charset=utf8', 'root', 'motdepasse');
+}
+catch(Exception $e)
+{
+        die('Erreur : '.$e->getMessage());
+}
+
+// Insertion du message
+$req = $bdd->prepare('INSERT INTO chat (PSEUDO, MSG) VALUES(?, ?)');
+$req->execute(array($_POST['pseudo'], $_POST['message']));
+
+header('Location: chat.php?pseudo=$_POST['pseudo']');
+?>
 
 
 # Désactiver dnsmasq
