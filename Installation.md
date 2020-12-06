@@ -61,8 +61,9 @@ pour un serveur HTTPS :
 # A.LIGHTTPD
  Ce serveur web est installé automatiquement avec RaspAp. Pas besoin d'Apache sur ce coup.
 
-# B. PHP
+# B. PHP et php.ini
 <br><code>sudo apt install php php-mbstring</code>
+/etc/php/7.3/cgi/php.ini
 
 # C. MARIADB
 <br><code>sudo apt install mariadb-server php-mysql</code>
@@ -96,86 +97,6 @@ sudo ln -s /usr/share/phpmyadmin /var/www/html/phpmyadmin
 -- MSG (type TEXT)
 ???? -- MAC (type VARCHAR 255) à voir si besoin de Ban ????
 
-# A.1. chat.php
-
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <title>Chat</title>
-    </head>
-    <style>
-    form
-    {
-        text-align:center;
-    }
-    </style>
-    <body>
-    
-    <?php
-    if $_POST['pseudo']
-     {
-      $pseudo=$_POST['pseudo'];
-      
-     }
-     else
-     $pseudo="pseudo";
-    ?>
-    
-    <form action="chat_post.php" method="post">
-        <p>
-        <label for="pseudo">Pseudo</label> : <input type="text" name="<?php echo $pseudo ?>" id="pseudo" /><br />
-        <label for="message">Message</label> :  <input type="text" name="message" id="message" /><br />
-
-        <input type="submit" value="Envoyer" />
-	</p>
-    </form>
-
-<?php
-// Connexion à la base de données
-try
-{
-	$bdd = new PDO('mysql:host=localhost;dbname=chat;charset=utf8', 'root', 'motdepasse');
-}
-catch(Exception $e)
-{
-        die('Erreur : '.$e->getMessage());
-}
-
-// les 10 derniers messages
-$reponse = $bdd->query('SELECT PSEUDO, message FROM chat ORDER BY ID DESC LIMIT 0, 10');
-
-while ($donnees = $reponse->fetch())
-{
-	echo '<p><strong>' . htmlspecialchars($donnees['PSEUDO']) . '</strong> : ' . htmlspecialchars($donnees['MSG']) . '</p>';
-}
-
-$reponse->closeCursor();
-
-?>
-    </body>
-</html>
-
-# A.2
-chat_post.php
-
-<?php
-// Connexion à la base de données
-try
-{
-	$bdd = new PDO('mysql:host=localhost;dbname=chat;charset=utf8', 'root', 'motdepasse');
-}
-catch(Exception $e)
-{
-        die('Erreur : '.$e->getMessage());
-}
-
-// Insertion du message
-$req = $bdd->prepare('INSERT INTO chat (PSEUDO, MSG) VALUES(?, ?)');
-$req->execute(array($_POST['pseudo'], $_POST['message']));
-
-header('Location: chat.php?pseudo=$_POST['pseudo']');
-?>
 
 
 # Désactiver dnsmasq
