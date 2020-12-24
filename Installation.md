@@ -1,6 +1,12 @@
 # Info
 Je travail avec des versions Desktop de Raspbian, l'installation est faite en ce sens : Raspbian Desktop + VNC
 
+# O. Compatibilité puce WIFI
+vérfier la présence du mode AP dans vote puce WIFI, avec l'utilitaire IW
+sudo apt install iw
+iw list
+"supported interface modes"
+
 # 1. Installation d'une Raspbian fraiche
 rien de particulier (Etcher + .img + microSD)
 
